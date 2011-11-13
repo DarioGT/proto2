@@ -1,0 +1,7 @@
+# Ignorar arquivos específicos
+.DS_Store
+.pyc
+*.class
+*.pyc
+*.pyo
+.deployables
