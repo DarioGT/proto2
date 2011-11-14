@@ -3,7 +3,6 @@ Ext.define('ProtoUL.controller.Contacts', {
 
     stores: ['Contacts'],
     models: ['Contact'],
-    // views: [ 'contact.Edit', 'contact.List', 'menuTree'],
     views: [ 'contact.Edit', 'contact.List'],
 
     refs: [{

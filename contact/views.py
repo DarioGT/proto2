@@ -77,11 +77,11 @@ def delete(request):
 
 def menu(request):
     context = [{
-                    'text':'Models',
+                    'text':'Dictionaire de donnes',
                     'expanded':True,
                     'children':[
-                        { 'text':'MCCD', 'leaf':True },
-                        { 'text':'MCD',  'leaf':True },
+                        { 'text':'Elements des donnes', 'leaf':True },
+                        { 'text':'Proprietes',  'leaf':True },
                     ]
                 }]
 
