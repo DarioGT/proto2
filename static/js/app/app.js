@@ -8,6 +8,8 @@
 // Ext.require('Ext.toolbar.Paging');
 // Ext.require('Ext.layout.container.Border');
 
+Ext.Loader.setConfig({enabled: true});
+
 Ext.application({
     name: 'ProtoUL',
     appFolder: 'static/js/app',
@@ -21,6 +23,10 @@ Ext.application({
         'Contacts'
     ],
 
+    // views : [
+        // 'menuTree',
+    // ],
+    
     autoCreateViewport: true
 
     // launch: function() {
