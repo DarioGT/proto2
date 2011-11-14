@@ -17,10 +17,10 @@ Ext.define('ProtoUL.view.MenuTree', {
                 {name: 'text', type: 'string'}
             ],
             
-            proxy: {
-                type: 'ajax',
-                url: '../data/nav-tree.json'
-            }
+            // proxy: {
+                // type: 'ajax',
+                // url: '../data/nav-tree.json'
+            // }
         });
         
         this.store = Ext.create('Ext.data.TreeStore', {
