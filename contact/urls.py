@@ -6,4 +6,7 @@ urlpatterns = patterns('',
     url('create.action/$', create, name='create'),
     url('update.action/$', update, name='update'),
     url('delete.action/$', delete, name='delete'),
+
+    ('menu/$', menu),
+
 )

@@ -9,7 +9,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Diego Maia', 'diegocmsantos@gmail.com'),
+    ('Dario Gomez', 'dariogomezt@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -74,7 +74,7 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_ROOT_PATH, 'static'),
-    'D:\data\ExtJs',
+    'D:/data/ExtJs',
 )
 
 # List of finder classes that know how to find static files in

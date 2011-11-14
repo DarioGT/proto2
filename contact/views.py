@@ -72,3 +72,17 @@ def delete(request):
         'success': True
     }
     return HttpResponse(json.dumps(context), mimetype="application/json")
+
+
+
+def menu(request):
+    context = [{
+                    'text':'Models',
+                    'expanded':True,
+                    'children':[
+                        { 'text':'MCCD', 'leaf':True },
+                        { 'text':'MCD',  'leaf':True },
+                    ]
+                }]
+
+    return HttpResponse(json.dumps(context), mimetype="application/json")

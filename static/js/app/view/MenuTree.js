@@ -17,36 +17,20 @@ Ext.define('ProtoUL.view.MenuTree', {
                 {name: 'text', type: 'string'}
             ],
             
-            // proxy: {
-                // type: 'ajax',
-                // url: '../data/nav-tree.json'
-            // }
+            proxy: {
+                type: 'ajax',
+                url: 'contact/menu'
+            }
+            
         });
         
         this.store = Ext.create('Ext.data.TreeStore', {
+    		autoLoad: true,
             model: 'NavLink',
-
             root: {
-                text:'Online',
+                text:'menu',
                 expanded: true,
-                children:[{
-                    text:'Models',
-                    expanded:true,
-                    children:[
-                        { text:'MCCD', iconCls:'user', leaf:true },
-                        { text:'MCD', iconCls:'user', leaf:true },
-                    ]
-                },{
-                    text:'Action Terrains',
-                    expanded:true,
-                    children:[
-                        { text:'Kiana', iconCls:'user-girl', leaf:true },
-                        { text:'Aubrey', iconCls:'user-girl', leaf:true },
-                        { text:'Cale', iconCls:'user-kid', leaf:true }
-                    ]
-                }]
             },            
-            
         });
         
         this.callParent(arguments);
