@@ -17,28 +17,19 @@ Ext.application({
     requires: [
         'Ext.toolbar.Paging', 
         'Ext.layout.container.Border',
+        'ProtoUL.view.Viewport',
     ],
 
     controllers: [
         'Contacts'
     ],
 
-    // views : [
-        // 'menuTree',
-    // ],
-    
-    autoCreateViewport: true
+    // autoCreateViewport: true
+    launch: function() {
 
-    // launch: function() {
-        // Ext.create('Ext.container.Viewport', {
-            // layout: 'fit',
-            // items: [
-                // {
-                    // xtype: 'mainForm'
-                // }
-            // ]
-        // });
-    // }
+        var app = new ProtoUL.view.Viewport();
+        
+    }
     
     
 });

@@ -8,6 +8,9 @@ Ext.define('ProtoUL.view.Viewport', {
 
     //requires: ['Ext.toolbar.Paging'],
     layout: 'border',
+    
+    // Dgt para q se desplegue 
+    autoRender: true, 
     defaults: {
         collapsible: true,
         split: true
