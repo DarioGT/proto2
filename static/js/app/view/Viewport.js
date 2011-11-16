@@ -69,8 +69,13 @@ Ext.define('ProtoUL.view.Viewport', {
             height: 180,
             minSize: 75,
             // items: protoTabs,
-        }
-        ]
-    }]
+        }]
+    }, {
+        region: 'south',
+        collapsible: false,
+        split: false,
+        height: 20,
+    }
+    ]
 
 });

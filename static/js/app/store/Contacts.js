@@ -3,7 +3,7 @@ Ext.define('ProtoUL.store.Contacts', {
     model: 'ProtoUL.model.Contact',
     autoLoad: true,
     pageSize: 35,
-    autoLoad: {start: 0, limit: 35},
+    autoLoad: {start: 0, limit: 100},
     
     proxy: {
         type: 'ajax',
