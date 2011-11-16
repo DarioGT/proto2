@@ -80,8 +80,8 @@ def menu(request):
                     'text':'Dictionaire de donnes',
                     'expanded':True,
                     'children':[
-                        { 'text':'Elements des donnes', 'leaf':True },
-                        { 'text':'Proprietes',  'leaf':True },
+                        { 'id': 'Concept' , 'text':'Elements des donnes', 'leaf':True },
+                        { 'id': 'Property' , 'text':'Proprietes',  'leaf':True },
                     ]
                 }]
 

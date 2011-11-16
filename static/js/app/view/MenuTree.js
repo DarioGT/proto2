@@ -1,32 +1,19 @@
 Ext.define('ProtoUL.view.MenuTree', {
     extend: 'Ext.tree.Panel',
     alias: 'widget.menuTree',
+    requires: [
+        'ProtoUL.model.MenuModel',
+    ],
     
     rootVisible: false,
-    listeners: {
-        'itemclick': function(view, model) {
-            this.fireEvent('navclick', this, model.data.id);
-        }
-    },
-    
+    lines: false,
+    minWidth: 200,
+
     initComponent: function() {
-        Ext.define('NavLink', {
-            extend: 'Ext.data.Model',
-            fields: [
-                {name: 'id', type: 'string'},
-                {name: 'text', type: 'string'}
-            ],
-            
-            proxy: {
-                type: 'ajax',
-                url: 'contact/menu'
-            }
-            
-        });
         
         this.store = Ext.create('Ext.data.TreeStore', {
     		autoLoad: true,
-            model: 'NavLink',
+            model: 'ProtoUL.model.MenuModel',
             root: {
                 text:'menu',
                 expanded: true,
@@ -34,6 +21,20 @@ Ext.define('ProtoUL.view.MenuTree', {
         });
         
         this.callParent(arguments);
-        this.addEvents('navclick');
-    }
+        this.addEvents('menuSelect');
+    }, 
+
+    listeners: {
+        
+        // .view.View , .data.Model record, HTMLElement item, Number index, .EventObject e, Object eOpts
+        'itemdblclick': function( view, rec, item, index, evObj , eOpts ) {
+            if ( rec.get('leaf') ) {
+                console.log( view, rec )
+                this.fireEvent('menuSelect', this, rec.data.id);
+            }
+        }
+        
+    },
+
+
 });
